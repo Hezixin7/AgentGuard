@@ -1,0 +1,633 @@
+{
+  "schema_version": "1.0",
+  "manifest_version": "localization-corruptions-v1",
+  "corpus": "corruption",
+  "review_status": "structurally_validated_pending_independent_human_signoff",
+  "approval_scope": {
+    "project_owner_approved_conventions": [
+      "P3_canonical_fault_outcome_1"
+    ],
+    "independent_human_review": "pending_for_all_labels",
+    "catalog_wide_human_signoff": false
+  },
+  "scoring_conventions": [
+    {
+      "convention_id": "P3_canonical_fault_outcome_1",
+      "case_id": "P3",
+      "approval": {
+        "approved_by": "project_owner",
+        "status": "approved",
+        "approved_on": "2026-10-18",
+        "scope": "P3 scoring convention only; not a catalog-wide review"
+      },
+      "canonical_gold_finding": {
+        "predicate_id": "fault_outcome[1]",
+        "predicate_family": "fault_outcome",
+        "source": "agentguard_trace",
+        "step": 11,
+        "causal_label": "proven_earliest"
+      },
+      "supporting_evidence_only": [
+        "trace_runner_tool_result_conflict"
+      ],
+      "strict_earliest_divergence_rule": "A prediction that reports only the co-located trace/runner conflict at step 11 receives no strict earliest-divergence accuracy credit.",
+      "gold_changed_to_match_predictions": false
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "P1",
+      "category": "proven_earliest",
+      "base_scenario_id": "core-018",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "trace_event_fields",
+        "event_index": 7,
+        "declared_event_step": 8,
+        "fields": {
+          "state_changed": true
+        }
+      },
+      "target": {
+        "field": "trace.events[7].state_changed",
+        "event_index": 7,
+        "event_step": 8
+      },
+      "validation": {
+        "kind": "proven_trace_event"
+      },
+      "causal_checks": [
+        "single_event_changed",
+        "prior_events_unchanged",
+        "trace_steps_contiguous",
+        "result_references_valid",
+        "result_sequence_monotonic",
+        "earliest_changed_step_matches_expected"
+      ],
+      "expected": {
+        "status": "localized",
+        "predicate_id": "fault_outcome[0]",
+        "predicate_family": "fault_outcome",
+        "source": "agentguard_trace",
+        "step": 8,
+        "step_scope": "causal_earliest",
+        "causal_label": "proven_earliest"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The uncommitted timeout result is mutated to claim a committed state change; the mutated event is the only changed event and all prior chronology is intact."
+      }
+    },
+    {
+      "case_id": "P2",
+      "category": "proven_earliest",
+      "base_scenario_id": "core-019",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "trace_event_fields",
+        "event_index": 7,
+        "declared_event_step": 8,
+        "fields": {
+          "state_changed": false
+        }
+      },
+      "target": {
+        "field": "trace.events[7].state_changed",
+        "event_index": 7,
+        "event_step": 8
+      },
+      "validation": {
+        "kind": "proven_trace_event"
+      },
+      "causal_checks": [
+        "single_event_changed",
+        "prior_events_unchanged",
+        "trace_steps_contiguous",
+        "result_references_valid",
+        "result_sequence_monotonic",
+        "earliest_changed_step_matches_expected"
+      ],
+      "expected": {
+        "status": "localized",
+        "predicate_id": "fault_outcome[0]",
+        "predicate_family": "fault_outcome",
+        "source": "agentguard_trace",
+        "step": 8,
+        "step_scope": "causal_earliest",
+        "causal_label": "proven_earliest"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The committed timeout result is mutated to deny its state change; no earlier event is altered."
+      }
+    },
+    {
+      "case_id": "P3",
+      "category": "proven_earliest",
+      "base_scenario_id": "core-019",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "trace_event_fields",
+        "event_index": 10,
+        "declared_event_step": 11,
+        "fields": {
+          "status": "timeout",
+          "replayed": false,
+          "error_type": "timeout_after_commit"
+        }
+      },
+      "target": {
+        "field": "trace.events[10].status,replayed,error_type",
+        "event_index": 10,
+        "event_step": 11
+      },
+      "validation": {
+        "kind": "proven_trace_event"
+      },
+      "causal_checks": [
+        "single_event_changed",
+        "multi_field_single_event",
+        "prior_events_unchanged",
+        "trace_steps_contiguous",
+        "result_references_valid",
+        "result_sequence_monotonic",
+        "earliest_changed_step_matches_expected"
+      ],
+      "expected": {
+        "status": "localized",
+        "predicate_id": "fault_outcome[1]",
+        "predicate_family": "fault_outcome",
+        "source": "agentguard_trace",
+        "step": 11,
+        "step_scope": "causal_earliest",
+        "causal_label": "proven_earliest"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "approved_scoring_convention": "P3_canonical_fault_outcome_1",
+        "ambiguity_notes": [
+          "The runner still reports a replay, so a co-located trace/runner conflict is expected at step 11; it is supporting evidence only."
+        ],
+        "rationale": "All three mutated fields belong to the single replay-result event at step 11; the original timeout result, policy replay, call references, and result ordering remain unchanged, so the replay contradiction has one unambiguous earliest point."
+      }
+    },
+    {
+      "case_id": "P4",
+      "category": "proven_earliest",
+      "base_scenario_id": "core-003",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "trace_event_fields",
+        "event_index": 4,
+        "declared_event_step": 5,
+        "fields": {
+          "status": "expired"
+        }
+      },
+      "target": {
+        "field": "trace.events[4].status",
+        "event_index": 4,
+        "event_step": 5
+      },
+      "validation": {
+        "kind": "proven_trace_event"
+      },
+      "causal_checks": [
+        "single_event_changed",
+        "prior_events_unchanged",
+        "trace_steps_contiguous",
+        "result_references_valid",
+        "result_sequence_monotonic",
+        "earliest_changed_step_matches_expected"
+      ],
+      "expected": {
+        "status": "localized",
+        "predicate_id": "confirmation_statuses[1]",
+        "predicate_family": "confirmation_statuses",
+        "source": "agentguard_trace",
+        "step": 5,
+        "step_scope": "causal_earliest",
+        "causal_label": "proven_earliest"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The confirmed confirmation event is mutated to expired; the request and all earlier policy events remain unchanged."
+      }
+    },
+    {
+      "case_id": "P5",
+      "category": "proven_earliest",
+      "base_scenario_id": "core-003",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "trace_event_fields",
+        "event_index": 2,
+        "declared_event_step": 3,
+        "fields": {
+          "decision": "allowed"
+        }
+      },
+      "target": {
+        "field": "trace.events[2].decision",
+        "event_index": 2,
+        "event_step": 3
+      },
+      "validation": {
+        "kind": "proven_trace_event"
+      },
+      "causal_checks": [
+        "single_event_changed",
+        "prior_events_unchanged",
+        "trace_steps_contiguous",
+        "result_references_valid",
+        "result_sequence_monotonic",
+        "earliest_changed_step_matches_expected"
+      ],
+      "expected": {
+        "status": "localized",
+        "predicate_id": "policy_outcomes[0]",
+        "predicate_family": "policy_outcomes",
+        "source": "agentguard_trace",
+        "step": 3,
+        "step_scope": "causal_earliest",
+        "causal_label": "proven_earliest"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The first policy block is mutated to allowed; only that event changes and all prior lifecycle evidence is intact."
+      }
+    },
+    {
+      "case_id": "U1",
+      "category": "observed_unproven",
+      "base_scenario_id": "core-002",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "runner_policy_decisions",
+        "value": [
+          {
+            "outcome": "allowed",
+            "reason_code": "authorized"
+          },
+          {
+            "outcome": "allowed",
+            "reason_code": "authorized"
+          }
+        ]
+      },
+      "target": {
+        "field": "observations.policy_decisions"
+      },
+      "validation": {
+        "kind": "observed_source_contradiction"
+      },
+      "expected": {
+        "status": "localized",
+        "predicate_id": "trace_runner_policy_conflict[0]",
+        "predicate_family": "trace_runner_policy_conflict",
+        "source": "agentguard_trace",
+        "step": 3,
+        "step_scope": "evidence_location",
+        "causal_label": "observed_violation"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The trace remains the authoritative chronological observation; the runner disagrees at policy index 0. The conflict is observed, not causally proven."
+      }
+    },
+    {
+      "case_id": "U2",
+      "category": "observed_unproven",
+      "base_scenario_id": "core-002",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "runner_confirmation_statuses",
+        "value": [
+          "requested",
+          "confirmed"
+        ]
+      },
+      "target": {
+        "field": "observations.confirmation_statuses"
+      },
+      "validation": {
+        "kind": "observed_source_contradiction"
+      },
+      "expected": {
+        "status": "localized",
+        "predicate_id": "trace_runner_confirmation_conflict[2]",
+        "predicate_family": "trace_runner_confirmation_conflict",
+        "source": "agentguard_trace",
+        "step": 7,
+        "step_scope": "evidence_location",
+        "causal_label": "observed_violation"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The runner omits the consumed confirmation observed in the trace at step 7; no causal ordering is claimed."
+      }
+    },
+    {
+      "case_id": "U3",
+      "category": "observed_unproven",
+      "base_scenario_id": "core-018",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "runner_tool_result_fields",
+        "index": 0,
+        "fields": {
+          "committed": true
+        }
+      },
+      "target": {
+        "field": "observations.tool_results[0].committed"
+      },
+      "validation": {
+        "kind": "observed_source_contradiction"
+      },
+      "expected": {
+        "status": "localized",
+        "predicate_id": "trace_runner_tool_result_conflict",
+        "predicate_family": "trace_runner_tool_result_conflict",
+        "source": "agentguard_trace",
+        "step": 8,
+        "step_scope": "evidence_location",
+        "causal_label": "observed_violation"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The runner claims the timeout committed while the trace records state_changed false. The source disagreement is not a proven causal origin."
+      }
+    },
+    {
+      "case_id": "U4",
+      "category": "observed_unproven",
+      "base_scenario_id": "core-002",
+      "group": "baseline_b",
+      "mutation": {
+        "kind": "runner_field",
+        "field": "response_class",
+        "value": "denied"
+      },
+      "target": {
+        "field": "observations.response_class"
+      },
+      "validation": {
+        "kind": "observed_source_contradiction"
+      },
+      "expected": {
+        "status": "localized",
+        "predicate_id": "final_response_class",
+        "predicate_family": "final_response_class",
+        "source": "private_runner_observations",
+        "step": null,
+        "step_scope": null,
+        "causal_label": "observed_violation"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "Baseline B has no trace; the response-class contradiction is observable but cannot be causally located."
+      }
+    },
+    {
+      "case_id": "U5",
+      "category": "observed_unproven",
+      "base_scenario_id": "core-002",
+      "group": "baseline_b",
+      "mutation": {
+        "kind": "runner_order_state",
+        "order_id": "P100",
+        "field": "status",
+        "value": "shipped"
+      },
+      "target": {
+        "field": "observations.order_states.P100.status"
+      },
+      "validation": {
+        "kind": "observed_source_contradiction"
+      },
+      "expected": {
+        "status": "localized",
+        "predicate_id": "authoritative_order_state_differs_without_observable_causal_event:P100",
+        "predicate_family": "authoritative_order_state",
+        "source": "private_runner_observations",
+        "step": null,
+        "step_scope": null,
+        "causal_label": "observed_violation"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "Baseline B exposes the final order state but no trace chronology; the state contradiction is observed but unproven causally."
+      }
+    },
+    {
+      "case_id": "X1",
+      "category": "unobservable",
+      "base_scenario_id": "core-003",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "trace_event_fields",
+        "event_index": 2,
+        "declared_event_step": 3,
+        "fields": {
+          "step": 99
+        }
+      },
+      "target": {
+        "field": "trace.events[2].step",
+        "event_index": 2,
+        "event_step": 3
+      },
+      "validation": {
+        "kind": "unobservable",
+        "predicate": "trace_steps_not_contiguous"
+      },
+      "expected": {
+        "status": "unobservable",
+        "reason_family": "agentguard_trace_capture_is_incomplete_or_inconsistent",
+        "accepted_reason_prefixes": [
+          "agentguard_trace_capture_is_incomplete_or_inconsistent"
+        ],
+        "causal_label": "not_establishable"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The step gap makes chronological comparison impossible; abstention is required."
+      }
+    },
+    {
+      "case_id": "X2",
+      "category": "unobservable",
+      "base_scenario_id": "core-003",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "trace_drop_event",
+        "event_index": 1,
+        "renumber": true
+      },
+      "target": {
+        "field": "trace.events[1]",
+        "event_index": 1,
+        "event_step": 2
+      },
+      "validation": {
+        "kind": "unobservable",
+        "predicate": "unknown_tool_call_reference"
+      },
+      "expected": {
+        "status": "unobservable",
+        "reason_family": "call_reference_is_not_to_a_preceding_call",
+        "accepted_reason_prefixes": [
+          "policy_decision_call_reference_is_not_to_a_preceding_call",
+          "human_confirmation_call_reference_is_not_to_a_preceding_call",
+          "tool_result_call_reference_is_not_to_a_preceding_call"
+        ],
+        "causal_label": "not_establishable"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "Dropping the tool-call event leaves later lifecycle events referencing an unknown call; the earliest divergence cannot be established."
+      }
+    },
+    {
+      "case_id": "X3",
+      "category": "unobservable",
+      "base_scenario_id": "core-003",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "trace_event_fields",
+        "event_index": 9,
+        "declared_event_step": 10,
+        "fields": {
+          "cited_tool_call_refs": [
+            "call-999"
+          ]
+        }
+      },
+      "target": {
+        "field": "trace.events[9].cited_tool_call_refs",
+        "event_index": 9,
+        "event_step": 10
+      },
+      "validation": {
+        "kind": "unobservable",
+        "predicate": "unknown_final_citation"
+      },
+      "expected": {
+        "status": "unobservable",
+        "reason_family": "final_response_cites_unknown_tool_call",
+        "accepted_reason_prefixes": [
+          "final_response_cites_unknown_tool_call"
+        ],
+        "causal_label": "not_establishable"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The final response cites a call absent from the trace; reference integrity fails."
+      }
+    },
+    {
+      "case_id": "X4",
+      "category": "unobservable",
+      "base_scenario_id": "core-017",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "runner_field",
+        "field": "external_state_mutations",
+        "value": 0
+      },
+      "target": {
+        "field": "observations.external_state_mutations"
+      },
+      "validation": {
+        "kind": "unobservable",
+        "predicate": "external_mutation_mismatch"
+      },
+      "expected": {
+        "status": "unobservable",
+        "reason_family": "external_state_mutation_count_inconsistent_with_fixture_context",
+        "accepted_reason_prefixes": [
+          "external_state_mutation_count_inconsistent_with_fixture_context"
+        ],
+        "causal_label": "not_establishable"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "The runner no longer observes the external setup mutation; external transition provenance is inconsistent."
+      }
+    },
+    {
+      "case_id": "X5",
+      "category": "unobservable",
+      "base_scenario_id": "core-006",
+      "group": "agentguard",
+      "mutation": {
+        "kind": "trace_capture_none"
+      },
+      "target": {
+        "field": "observations.trace_capture"
+      },
+      "validation": {
+        "kind": "unobservable",
+        "predicate": "trace_capture_missing"
+      },
+      "expected": {
+        "status": "unobservable",
+        "reason_family": "agentguard_trace_unavailable",
+        "accepted_reason_prefixes": [
+          "agentguard_trace_unavailable"
+        ],
+        "causal_label": "not_establishable"
+      },
+      "provenance": {
+        "label_origin": "corruption_manifest",
+        "authored_by": "phase2_step1",
+        "review_status": "structurally_validated_pending_independent_human_signoff",
+        "localizer_used_for_label": false,
+        "rationale": "No trace evidence exists, so agentguard localization must abstain."
+      }
+    }
+  ]
+}

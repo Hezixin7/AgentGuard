@@ -1,0 +1,1668 @@
+{
+  "corruption": {
+    "all_cases_status_accuracy": {
+      "denominator": 15,
+      "numerator": 15,
+      "rate": 1.0,
+      "status": "supported"
+    },
+    "cases": [
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "fault_outcome[0]",
+        "actual_source": "agentguard_trace",
+        "actual_status": "localized",
+        "actual_step": 8,
+        "base_scenario_id": "core-018",
+        "case_id": "P1",
+        "category": "proven_earliest",
+        "causal_status": "proven",
+        "expected_predicate_id": "fault_outcome[0]",
+        "expected_source": "agentguard_trace",
+        "expected_status": "localized",
+        "expected_step": 8,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": true,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "fault_outcome[0]",
+        "actual_source": "agentguard_trace",
+        "actual_status": "localized",
+        "actual_step": 8,
+        "base_scenario_id": "core-019",
+        "case_id": "P2",
+        "category": "proven_earliest",
+        "causal_status": "proven",
+        "expected_predicate_id": "fault_outcome[0]",
+        "expected_source": "agentguard_trace",
+        "expected_status": "localized",
+        "expected_step": 8,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": true,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "fault_outcome[1]",
+        "actual_source": "agentguard_trace",
+        "actual_status": "localized",
+        "actual_step": 11,
+        "base_scenario_id": "core-019",
+        "case_id": "P3",
+        "category": "proven_earliest",
+        "causal_status": "proven",
+        "expected_predicate_id": "fault_outcome[1]",
+        "expected_source": "agentguard_trace",
+        "expected_status": "localized",
+        "expected_step": 11,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": true,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "confirmation_statuses[1]",
+        "actual_source": "agentguard_trace",
+        "actual_status": "localized",
+        "actual_step": 5,
+        "base_scenario_id": "core-003",
+        "case_id": "P4",
+        "category": "proven_earliest",
+        "causal_status": "proven",
+        "expected_predicate_id": "confirmation_statuses[1]",
+        "expected_source": "agentguard_trace",
+        "expected_status": "localized",
+        "expected_step": 5,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": true,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "policy_outcomes[0]",
+        "actual_source": "agentguard_trace",
+        "actual_status": "localized",
+        "actual_step": 3,
+        "base_scenario_id": "core-003",
+        "case_id": "P5",
+        "category": "proven_earliest",
+        "causal_status": "proven",
+        "expected_predicate_id": "policy_outcomes[0]",
+        "expected_source": "agentguard_trace",
+        "expected_status": "localized",
+        "expected_step": 3,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": true,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "trace_runner_policy_conflict[0]",
+        "actual_source": "agentguard_trace",
+        "actual_status": "localized",
+        "actual_step": 3,
+        "base_scenario_id": "core-002",
+        "case_id": "U1",
+        "category": "observed_unproven",
+        "causal_status": "unproven",
+        "expected_predicate_id": "trace_runner_policy_conflict[0]",
+        "expected_source": "agentguard_trace",
+        "expected_status": "localized",
+        "expected_step": 3,
+        "group": "agentguard",
+        "observed_correct": true,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "trace_runner_confirmation_conflict[2]",
+        "actual_source": "agentguard_trace",
+        "actual_status": "localized",
+        "actual_step": 7,
+        "base_scenario_id": "core-002",
+        "case_id": "U2",
+        "category": "observed_unproven",
+        "causal_status": "unproven",
+        "expected_predicate_id": "trace_runner_confirmation_conflict[2]",
+        "expected_source": "agentguard_trace",
+        "expected_status": "localized",
+        "expected_step": 7,
+        "group": "agentguard",
+        "observed_correct": true,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "trace_runner_tool_result_conflict",
+        "actual_source": "agentguard_trace",
+        "actual_status": "localized",
+        "actual_step": 8,
+        "base_scenario_id": "core-018",
+        "case_id": "U3",
+        "category": "observed_unproven",
+        "causal_status": "unproven",
+        "expected_predicate_id": "trace_runner_tool_result_conflict",
+        "expected_source": "agentguard_trace",
+        "expected_status": "localized",
+        "expected_step": 8,
+        "group": "agentguard",
+        "observed_correct": true,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "final_response_class",
+        "actual_source": "private_runner_observations",
+        "actual_status": "localized",
+        "actual_step": null,
+        "base_scenario_id": "core-002",
+        "case_id": "U4",
+        "category": "observed_unproven",
+        "causal_status": "unproven",
+        "expected_predicate_id": "final_response_class",
+        "expected_source": "private_runner_observations",
+        "expected_status": "localized",
+        "expected_step": null,
+        "group": "baseline_b",
+        "observed_correct": true,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": false,
+        "abstention_error": null,
+        "actual_predicate_id": "authoritative_order_state_differs_without_observable_causal_event:P100",
+        "actual_source": "private_runner_observations",
+        "actual_status": "localized",
+        "actual_step": null,
+        "base_scenario_id": "core-002",
+        "case_id": "U5",
+        "category": "observed_unproven",
+        "causal_status": "unproven",
+        "expected_predicate_id": "authoritative_order_state_differs_without_observable_causal_event:P100",
+        "expected_source": "private_runner_observations",
+        "expected_status": "localized",
+        "expected_step": null,
+        "group": "baseline_b",
+        "observed_correct": true,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": true
+      },
+      {
+        "abstention_correct": true,
+        "abstention_error": null,
+        "actual_predicate_id": null,
+        "actual_source": null,
+        "actual_status": "unobservable",
+        "actual_step": null,
+        "base_scenario_id": "core-003",
+        "case_id": "X1",
+        "category": "unobservable",
+        "causal_status": "unproven",
+        "expected_predicate_id": null,
+        "expected_source": null,
+        "expected_status": "unobservable",
+        "expected_step": null,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": false
+      },
+      {
+        "abstention_correct": true,
+        "abstention_error": null,
+        "actual_predicate_id": null,
+        "actual_source": null,
+        "actual_status": "unobservable",
+        "actual_step": null,
+        "base_scenario_id": "core-003",
+        "case_id": "X2",
+        "category": "unobservable",
+        "causal_status": "unproven",
+        "expected_predicate_id": null,
+        "expected_source": null,
+        "expected_status": "unobservable",
+        "expected_step": null,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": false
+      },
+      {
+        "abstention_correct": true,
+        "abstention_error": null,
+        "actual_predicate_id": null,
+        "actual_source": null,
+        "actual_status": "unobservable",
+        "actual_step": null,
+        "base_scenario_id": "core-003",
+        "case_id": "X3",
+        "category": "unobservable",
+        "causal_status": "unproven",
+        "expected_predicate_id": null,
+        "expected_source": null,
+        "expected_status": "unobservable",
+        "expected_step": null,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": false
+      },
+      {
+        "abstention_correct": true,
+        "abstention_error": null,
+        "actual_predicate_id": null,
+        "actual_source": null,
+        "actual_status": "unobservable",
+        "actual_step": null,
+        "base_scenario_id": "core-017",
+        "case_id": "X4",
+        "category": "unobservable",
+        "causal_status": "unproven",
+        "expected_predicate_id": null,
+        "expected_source": null,
+        "expected_status": "unobservable",
+        "expected_step": null,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": false
+      },
+      {
+        "abstention_correct": true,
+        "abstention_error": null,
+        "actual_predicate_id": null,
+        "actual_source": null,
+        "actual_status": "unobservable",
+        "actual_step": null,
+        "base_scenario_id": "core-006",
+        "case_id": "X5",
+        "category": "unobservable",
+        "causal_status": "unproven",
+        "expected_predicate_id": null,
+        "expected_source": null,
+        "expected_status": "unobservable",
+        "expected_step": null,
+        "group": "agentguard",
+        "observed_correct": false,
+        "observed_error": null,
+        "status_correct": true,
+        "strict_correct": false,
+        "strict_error": null,
+        "usable_diagnosis": false
+      }
+    ],
+    "categories": {
+      "observed_unproven": {
+        "cases": [
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "trace_runner_policy_conflict[0]",
+            "actual_source": "agentguard_trace",
+            "actual_status": "localized",
+            "actual_step": 3,
+            "base_scenario_id": "core-002",
+            "case_id": "U1",
+            "category": "observed_unproven",
+            "causal_status": "unproven",
+            "expected_predicate_id": "trace_runner_policy_conflict[0]",
+            "expected_source": "agentguard_trace",
+            "expected_status": "localized",
+            "expected_step": 3,
+            "group": "agentguard",
+            "observed_correct": true,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": true
+          },
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "trace_runner_confirmation_conflict[2]",
+            "actual_source": "agentguard_trace",
+            "actual_status": "localized",
+            "actual_step": 7,
+            "base_scenario_id": "core-002",
+            "case_id": "U2",
+            "category": "observed_unproven",
+            "causal_status": "unproven",
+            "expected_predicate_id": "trace_runner_confirmation_conflict[2]",
+            "expected_source": "agentguard_trace",
+            "expected_status": "localized",
+            "expected_step": 7,
+            "group": "agentguard",
+            "observed_correct": true,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": true
+          },
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "trace_runner_tool_result_conflict",
+            "actual_source": "agentguard_trace",
+            "actual_status": "localized",
+            "actual_step": 8,
+            "base_scenario_id": "core-018",
+            "case_id": "U3",
+            "category": "observed_unproven",
+            "causal_status": "unproven",
+            "expected_predicate_id": "trace_runner_tool_result_conflict",
+            "expected_source": "agentguard_trace",
+            "expected_status": "localized",
+            "expected_step": 8,
+            "group": "agentguard",
+            "observed_correct": true,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": true
+          },
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "final_response_class",
+            "actual_source": "private_runner_observations",
+            "actual_status": "localized",
+            "actual_step": null,
+            "base_scenario_id": "core-002",
+            "case_id": "U4",
+            "category": "observed_unproven",
+            "causal_status": "unproven",
+            "expected_predicate_id": "final_response_class",
+            "expected_source": "private_runner_observations",
+            "expected_status": "localized",
+            "expected_step": null,
+            "group": "baseline_b",
+            "observed_correct": true,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": true
+          },
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "authoritative_order_state_differs_without_observable_causal_event:P100",
+            "actual_source": "private_runner_observations",
+            "actual_status": "localized",
+            "actual_step": null,
+            "base_scenario_id": "core-002",
+            "case_id": "U5",
+            "category": "observed_unproven",
+            "causal_status": "unproven",
+            "expected_predicate_id": "authoritative_order_state_differs_without_observable_causal_event:P100",
+            "expected_source": "private_runner_observations",
+            "expected_status": "localized",
+            "expected_step": null,
+            "group": "baseline_b",
+            "observed_correct": true,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": true
+          }
+        ],
+        "confusion": {
+          "localized": {
+            "localized": 5
+          }
+        },
+        "diagnosis_coverage": {
+          "denominator": 5,
+          "numerator": 5,
+          "rate": 1.0,
+          "status": "supported"
+        },
+        "error_categories": {},
+        "observed_violation_detection": {
+          "denominator": 5,
+          "numerator": 5,
+          "rate": 1.0,
+          "status": "supported"
+        },
+        "status_accuracy": {
+          "denominator": 5,
+          "numerator": 5,
+          "rate": 1.0,
+          "status": "supported"
+        }
+      },
+      "proven_earliest": {
+        "cases": [
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "fault_outcome[0]",
+            "actual_source": "agentguard_trace",
+            "actual_status": "localized",
+            "actual_step": 8,
+            "base_scenario_id": "core-018",
+            "case_id": "P1",
+            "category": "proven_earliest",
+            "causal_status": "proven",
+            "expected_predicate_id": "fault_outcome[0]",
+            "expected_source": "agentguard_trace",
+            "expected_status": "localized",
+            "expected_step": 8,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": true,
+            "strict_error": null,
+            "usable_diagnosis": true
+          },
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "fault_outcome[0]",
+            "actual_source": "agentguard_trace",
+            "actual_status": "localized",
+            "actual_step": 8,
+            "base_scenario_id": "core-019",
+            "case_id": "P2",
+            "category": "proven_earliest",
+            "causal_status": "proven",
+            "expected_predicate_id": "fault_outcome[0]",
+            "expected_source": "agentguard_trace",
+            "expected_status": "localized",
+            "expected_step": 8,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": true,
+            "strict_error": null,
+            "usable_diagnosis": true
+          },
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "fault_outcome[1]",
+            "actual_source": "agentguard_trace",
+            "actual_status": "localized",
+            "actual_step": 11,
+            "base_scenario_id": "core-019",
+            "case_id": "P3",
+            "category": "proven_earliest",
+            "causal_status": "proven",
+            "expected_predicate_id": "fault_outcome[1]",
+            "expected_source": "agentguard_trace",
+            "expected_status": "localized",
+            "expected_step": 11,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": true,
+            "strict_error": null,
+            "usable_diagnosis": true
+          },
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "confirmation_statuses[1]",
+            "actual_source": "agentguard_trace",
+            "actual_status": "localized",
+            "actual_step": 5,
+            "base_scenario_id": "core-003",
+            "case_id": "P4",
+            "category": "proven_earliest",
+            "causal_status": "proven",
+            "expected_predicate_id": "confirmation_statuses[1]",
+            "expected_source": "agentguard_trace",
+            "expected_status": "localized",
+            "expected_step": 5,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": true,
+            "strict_error": null,
+            "usable_diagnosis": true
+          },
+          {
+            "abstention_correct": false,
+            "abstention_error": null,
+            "actual_predicate_id": "policy_outcomes[0]",
+            "actual_source": "agentguard_trace",
+            "actual_status": "localized",
+            "actual_step": 3,
+            "base_scenario_id": "core-003",
+            "case_id": "P5",
+            "category": "proven_earliest",
+            "causal_status": "proven",
+            "expected_predicate_id": "policy_outcomes[0]",
+            "expected_source": "agentguard_trace",
+            "expected_status": "localized",
+            "expected_step": 3,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": true,
+            "strict_error": null,
+            "usable_diagnosis": true
+          }
+        ],
+        "confusion": {
+          "localized": {
+            "localized": 5
+          }
+        },
+        "diagnosis_coverage": {
+          "denominator": 5,
+          "numerator": 5,
+          "rate": 1.0,
+          "status": "supported"
+        },
+        "error_categories": {},
+        "status_accuracy": {
+          "denominator": 5,
+          "numerator": 5,
+          "rate": 1.0,
+          "status": "supported"
+        },
+        "strict_earliest_accuracy": {
+          "denominator": 5,
+          "numerator": 5,
+          "rate": 1.0,
+          "status": "supported"
+        }
+      },
+      "unobservable": {
+        "abstention_accuracy": {
+          "denominator": 5,
+          "numerator": 5,
+          "rate": 1.0,
+          "status": "supported"
+        },
+        "cases": [
+          {
+            "abstention_correct": true,
+            "abstention_error": null,
+            "actual_predicate_id": null,
+            "actual_source": null,
+            "actual_status": "unobservable",
+            "actual_step": null,
+            "base_scenario_id": "core-003",
+            "case_id": "X1",
+            "category": "unobservable",
+            "causal_status": "unproven",
+            "expected_predicate_id": null,
+            "expected_source": null,
+            "expected_status": "unobservable",
+            "expected_step": null,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": false
+          },
+          {
+            "abstention_correct": true,
+            "abstention_error": null,
+            "actual_predicate_id": null,
+            "actual_source": null,
+            "actual_status": "unobservable",
+            "actual_step": null,
+            "base_scenario_id": "core-003",
+            "case_id": "X2",
+            "category": "unobservable",
+            "causal_status": "unproven",
+            "expected_predicate_id": null,
+            "expected_source": null,
+            "expected_status": "unobservable",
+            "expected_step": null,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": false
+          },
+          {
+            "abstention_correct": true,
+            "abstention_error": null,
+            "actual_predicate_id": null,
+            "actual_source": null,
+            "actual_status": "unobservable",
+            "actual_step": null,
+            "base_scenario_id": "core-003",
+            "case_id": "X3",
+            "category": "unobservable",
+            "causal_status": "unproven",
+            "expected_predicate_id": null,
+            "expected_source": null,
+            "expected_status": "unobservable",
+            "expected_step": null,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": false
+          },
+          {
+            "abstention_correct": true,
+            "abstention_error": null,
+            "actual_predicate_id": null,
+            "actual_source": null,
+            "actual_status": "unobservable",
+            "actual_step": null,
+            "base_scenario_id": "core-017",
+            "case_id": "X4",
+            "category": "unobservable",
+            "causal_status": "unproven",
+            "expected_predicate_id": null,
+            "expected_source": null,
+            "expected_status": "unobservable",
+            "expected_step": null,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": false
+          },
+          {
+            "abstention_correct": true,
+            "abstention_error": null,
+            "actual_predicate_id": null,
+            "actual_source": null,
+            "actual_status": "unobservable",
+            "actual_step": null,
+            "base_scenario_id": "core-006",
+            "case_id": "X5",
+            "category": "unobservable",
+            "causal_status": "unproven",
+            "expected_predicate_id": null,
+            "expected_source": null,
+            "expected_status": "unobservable",
+            "expected_step": null,
+            "group": "agentguard",
+            "observed_correct": false,
+            "observed_error": null,
+            "status_correct": true,
+            "strict_correct": false,
+            "strict_error": null,
+            "usable_diagnosis": false
+          }
+        ],
+        "confusion": {
+          "unobservable": {
+            "unobservable": 5
+          }
+        },
+        "error_categories": {},
+        "status_accuracy": {
+          "denominator": 5,
+          "numerator": 5,
+          "rate": 1.0,
+          "status": "supported"
+        }
+      }
+    },
+    "diagnosis_coverage": {
+      "denominator": 10,
+      "numerator": 10,
+      "rate": 1.0,
+      "status": "supported"
+    },
+    "p3_strict_convention": {
+      "actual_causal_status": "proven",
+      "actual_predicate_id": "fault_outcome[1]",
+      "actual_source": "agentguard_trace",
+      "actual_step": 11,
+      "canonical_gold_finding": {
+        "causal_label": "proven_earliest",
+        "predicate_family": "fault_outcome",
+        "predicate_id": "fault_outcome[1]",
+        "source": "agentguard_trace",
+        "step": 11
+      },
+      "convention_id": "P3_canonical_fault_outcome_1",
+      "strict_credit": true,
+      "supporting_evidence_only": [
+        "trace_runner_tool_result_conflict"
+      ]
+    },
+    "primary_unit": "case"
+  },
+  "frozen_scenarios": {
+    "agentguard": {
+      "abstention_accuracy": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null,
+        "status": "not_supported"
+      },
+      "clean_run_false_positive": {
+        "cluster_rate": {
+          "denominator": 20,
+          "numerator": 0,
+          "rate": 0.0,
+          "status": "supported"
+        },
+        "record_rate": {
+          "denominator": 100,
+          "numerator": 0,
+          "rate": 0.0,
+          "status": "supported"
+        }
+      },
+      "cluster_confusion": {
+        "fail": 0,
+        "pass": 20
+      },
+      "cluster_size": 5,
+      "confusion": {
+        "no_divergence": {
+          "no_divergence": 100
+        }
+      },
+      "diagnosis_coverage": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null,
+        "status": "not_supported"
+      },
+      "error_categories": {
+        "status": {}
+      },
+      "not_scored_count": 0,
+      "not_scored_reasons": {},
+      "parent_clusters": [
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-001",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-002",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-003",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-004",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-005",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-006",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-007",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-008",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-009",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-010",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-011",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-012",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-013",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-014",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-015",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-016",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-017",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-018",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-019",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-020",
+          "passed": true,
+          "record_count": 5
+        }
+      ],
+      "primary_unit": "parent_cluster",
+      "record_status_accuracy": {
+        "denominator": 100,
+        "numerator": 100,
+        "rate": 1.0,
+        "status": "supported"
+      },
+      "status_accuracy": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0,
+        "status": "supported"
+      },
+      "strict_earliest_accuracy": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null,
+        "status": "not_supported"
+      }
+    },
+    "baseline_a": {
+      "abstention_accuracy": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null,
+        "status": "not_supported"
+      },
+      "confusion": {
+        "divergence": {
+          "localized": 28
+        }
+      },
+      "diagnosis_coverage": {
+        "denominator": 28,
+        "numerator": 28,
+        "rate": 1.0,
+        "status": "supported"
+      },
+      "error_categories": {
+        "observed_violation": {},
+        "status": {}
+      },
+      "not_scored_count": 72,
+      "not_scored_reasons": {
+        "oracle_does_not_forbid_tool_execution": 72
+      },
+      "observed_violation_detection": {
+        "denominator": 28,
+        "numerator": 28,
+        "rate": 1.0,
+        "status": "supported"
+      },
+      "parent_cluster_consistency": {
+        "denominator": 12,
+        "numerator": 12,
+        "rate": 1.0,
+        "status": "supported"
+      },
+      "parent_clusters": [
+        {
+          "eligible_record_count": 2,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-001",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 1,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-003",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 2,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-005",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 3,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-006",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 4,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-007",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 2,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-008",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 1,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-009",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 3,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-010",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 2,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-011",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 1,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-012",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 3,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-013",
+          "passed": true
+        },
+        {
+          "eligible_record_count": 4,
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-014",
+          "passed": true
+        }
+      ],
+      "primary_unit": "record_for_observed_violation",
+      "records": [
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-001",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-001-v1",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-001",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-001-v2",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-003",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-003-v2",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-005",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-005-v1",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-005",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-005-v2",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-006",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-006",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-006",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-006-nl",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-006",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-006-v3",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-007",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-007",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-007",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-007-nl",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-007",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-007-v2",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-007",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-007-v3",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-008",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-008-v2",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-008",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-008-v3",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-009",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-009-v3",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-010",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-010",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-010",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-010-nl",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-010",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-010-v2",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-011",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-011-v2",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-011",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-011-v3",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-012",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-012-v2",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-013",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-013",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-013",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-013-nl",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-013",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-013-v3",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-014",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-014",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-014",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-014-nl",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-014",
+          "predicate_id": "prohibited_tool_execution",
+          "scenario_id": "core-014-v1",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        },
+        {
+          "causal_status": "unproven",
+          "observed_violation_correct": true,
+          "observed_violation_error": null,
+          "parent_scenario_id": "core-014",
+          "predicate_id": "tool_invocation_count",
+          "scenario_id": "core-014-v3",
+          "source": "private_runner_observations",
+          "status": "localized",
+          "status_correct": true,
+          "usable_diagnosis": true
+        }
+      ],
+      "status_accuracy": {
+        "denominator": 28,
+        "numerator": 28,
+        "rate": 1.0,
+        "status": "supported"
+      },
+      "strict_earliest_accuracy": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null,
+        "status": "not_supported"
+      }
+    },
+    "baseline_b": {
+      "abstention_accuracy": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null,
+        "status": "not_supported"
+      },
+      "clean_run_false_positive": {
+        "cluster_rate": {
+          "denominator": 20,
+          "numerator": 0,
+          "rate": 0.0,
+          "status": "supported"
+        },
+        "record_rate": {
+          "denominator": 100,
+          "numerator": 0,
+          "rate": 0.0,
+          "status": "supported"
+        }
+      },
+      "cluster_confusion": {
+        "fail": 0,
+        "pass": 20
+      },
+      "cluster_size": 5,
+      "confusion": {
+        "no_divergence": {
+          "no_divergence": 100
+        }
+      },
+      "diagnosis_coverage": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null,
+        "status": "not_supported"
+      },
+      "error_categories": {
+        "status": {}
+      },
+      "not_scored_count": 0,
+      "not_scored_reasons": {},
+      "parent_clusters": [
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-001",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-002",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-003",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-004",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-005",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-006",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-007",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-008",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-009",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-010",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-011",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-012",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-013",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-014",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-015",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-016",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-017",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-018",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-019",
+          "passed": true,
+          "record_count": 5
+        },
+        {
+          "failed_scenario_ids": [],
+          "parent_scenario_id": "core-020",
+          "passed": true,
+          "record_count": 5
+        }
+      ],
+      "primary_unit": "parent_cluster",
+      "record_status_accuracy": {
+        "denominator": 100,
+        "numerator": 100,
+        "rate": 1.0,
+        "status": "supported"
+      },
+      "status_accuracy": {
+        "denominator": 20,
+        "numerator": 20,
+        "rate": 1.0,
+        "status": "supported"
+      },
+      "strict_earliest_accuracy": {
+        "denominator": 0,
+        "numerator": 0,
+        "rate": null,
+        "status": "not_supported"
+      }
+    }
+  },
+  "limitations": [
+    "Independent human review remains pending for the complete label catalog.",
+    "The frozen corpus contains no proven earliest-divergence labels; strict earliest-divergence accuracy is supported only by the corruption corpus.",
+    "Baseline A is scored only on its 28 eligible observed-violation records; 72 records are not_scored.",
+    "Derived deterministic and natural-language scenarios are replications, not independent samples; parent clusters are the primary unit.",
+    "Corruption cases are synthetic and separate from frozen-scenario accuracy."
+  ],
+  "provenance": {
+    "batch_schema_version": "1.1",
+    "catalog_wide_human_signoff": false,
+    "corruption_manifest_path": "evaluation/localization_corruptions_v1.json",
+    "corruption_manifest_sha256": "09b7af608056260a36a833c70923a75864020aaba359596dc01fefbe6f883c9a",
+    "corruption_manifest_version": "localization-corruptions-v1",
+    "dataset_schema_version": "1.0",
+    "gold_catalog_schema_errors": [],
+    "gold_label_catalog_path": "evaluation/gold_labels_v1.json",
+    "gold_label_catalog_sha256": "a2a4672ff702232c5036d798b4e303a3437c70c5d47359c30af2b6c2773c97a4",
+    "gold_label_catalog_version": "gold-localization-v1",
+    "localization_schema_version": "1.0",
+    "project_owner_approved_conventions": [
+      "P3_canonical_fault_outcome_1"
+    ],
+    "review_status": "independent_human_review_pending_for_all_labels",
+    "static_core_labels_match_builder": true
+  },
+  "report_version": "localization-accuracy-v1",
+  "schema_version": "1.0"
+}

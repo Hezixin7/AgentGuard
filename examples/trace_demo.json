@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "trace": {
+    "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+    "run_id": "demo-run",
+    "scenario_id": "refund-timeout-and-replay"
+  },
+  "events": [
+    {
+      "event_type": "llm_output",
+      "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+      "run_id": "demo-run",
+      "step": 1,
+      "timestamp": "2026-10-17T13:54:28.815017+00:00",
+      "raw_output": "[REDACTED]",
+      "parsed_plan": {
+        "tool": "refund_order",
+        "order_id": "A123"
+      },
+      "model": "demo-model",
+      "prompt_tokens": null,
+      "completion_tokens": null
+    },
+    {
+      "event_type": "tool_call",
+      "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+      "run_id": "demo-run",
+      "step": 2,
+      "timestamp": "2026-10-17T13:54:28.815285+00:00",
+      "tool_call_id": "refund-attempt-1",
+      "tool_name": "refund_order",
+      "args": {
+        "order_id": "A123",
+        "amount": 25
+      },
+      "args_source": "user_text"
+    },
+    {
+      "event_type": "policy_decision",
+      "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+      "run_id": "demo-run",
+      "step": 3,
+      "timestamp": "2026-10-17T13:54:28.815309+00:00",
+      "tool_call_id": "refund-attempt-1",
+      "tool_name": "refund_order",
+      "decision": "allowed",
+      "reason_code": "refund_eligible",
+      "reason": "",
+      "checked_user_id": "[REDACTED]",
+      "checked_owner_id": "[REDACTED]",
+      "idempotency_key_ref": "sha256:demo-request"
+    },
+    {
+      "event_type": "human_confirmation",
+      "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+      "run_id": "demo-run",
+      "step": 4,
+      "timestamp": "2026-10-17T13:54:28.815330+00:00",
+      "tool_call_id": "refund-attempt-1",
+      "tool_name": "refund_order",
+      "args": {
+        "order_id": "A123",
+        "amount": 25
+      },
+      "authenticated_user_id": "[REDACTED]",
+      "confirmation_id": "[REDACTED]",
+      "token_expires_at": "",
+      "order_state_hash": "",
+      "status": "confirmed"
+    },
+    {
+      "event_type": "tool_result",
+      "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+      "run_id": "demo-run",
+      "step": 5,
+      "timestamp": "2026-10-17T13:54:28.815351+00:00",
+      "tool_call_id": "refund-attempt-1",
+      "tool_name": "refund_order",
+      "status": "timeout",
+      "result": null,
+      "error_type": "TimeoutError",
+      "idempotency_key_ref": "sha256:demo-request",
+      "replayed": false,
+      "state_changed": true,
+      "duration_ms": 0
+    },
+    {
+      "event_type": "tool_call",
+      "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+      "run_id": "demo-run",
+      "step": 6,
+      "timestamp": "2026-10-17T13:54:28.815371+00:00",
+      "tool_call_id": "refund-attempt-2",
+      "tool_name": "refund_order",
+      "args": {
+        "order_id": "A123",
+        "amount": 25
+      },
+      "args_source": "session"
+    },
+    {
+      "event_type": "policy_decision",
+      "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+      "run_id": "demo-run",
+      "step": 7,
+      "timestamp": "2026-10-17T13:54:28.815387+00:00",
+      "tool_call_id": "refund-attempt-2",
+      "tool_name": "refund_order",
+      "decision": "replay",
+      "reason_code": "idempotent_replay",
+      "reason": "",
+      "checked_user_id": "[REDACTED]",
+      "checked_owner_id": "[REDACTED]",
+      "idempotency_key_ref": "sha256:demo-request"
+    },
+    {
+      "event_type": "tool_result",
+      "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+      "run_id": "demo-run",
+      "step": 8,
+      "timestamp": "2026-10-17T13:54:28.815403+00:00",
+      "tool_call_id": "refund-attempt-2",
+      "tool_name": "refund_order",
+      "status": "replayed",
+      "result": {
+        "refund_id": "refund-demo",
+        "status": "completed"
+      },
+      "error_type": "",
+      "idempotency_key_ref": "sha256:demo-request",
+      "replayed": true,
+      "state_changed": false,
+      "duration_ms": 0
+    },
+    {
+      "event_type": "final_response",
+      "trace_id": "3879be6c-cd68-483c-ada4-3ed8dfd8a11a",
+      "run_id": "demo-run",
+      "step": 9,
+      "timestamp": "2026-10-17T13:54:28.815422+00:00",
+      "response": "[REDACTED]",
+      "cited_tool_calls": [
+        "refund-attempt-2"
+      ]
+    }
+  ]
+}
